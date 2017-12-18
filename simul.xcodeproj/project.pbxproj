@@ -13,8 +13,6 @@
 		005F4EC91FE7A85200661E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005F4EC71FE7A85200661E9C /* Main.storyboard */; };
 		005F4ECB1FE7A85200661E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005F4ECA1FE7A85200661E9C /* Assets.xcassets */; };
 		005F4ECE1FE7A85200661E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005F4ECC1FE7A85200661E9C /* LaunchScreen.storyboard */; };
-		005F4ED91FE7A85200661E9C /* simulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4ED81FE7A85200661E9C /* simulTests.swift */; };
-		005F4EE41FE7A85200661E9C /* simulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4EE31FE7A85200661E9C /* simulUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +42,7 @@
 		005F4ECD1FE7A85200661E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		005F4ECF1FE7A85200661E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005F4ED41FE7A85200661E9C /* simulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		005F4ED81FE7A85200661E9C /* simulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simulTests.swift; sourceTree = "<group>"; };
-		005F4EDA1FE7A85200661E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005F4EDF1FE7A85200661E9C /* simulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simulUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		005F4EE31FE7A85200661E9C /* simulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simulUITests.swift; sourceTree = "<group>"; };
-		005F4EE51FE7A85200661E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				005F4EC01FE7A85200661E9C /* simul */,
-				005F4ED71FE7A85200661E9C /* simulTests */,
-				005F4EE21FE7A85200661E9C /* simulUITests */,
 				005F4EBF1FE7A85200661E9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,24 +100,6 @@
 				005F4ECF1FE7A85200661E9C /* Info.plist */,
 			);
 			path = simul;
-			sourceTree = "<group>";
-		};
-		005F4ED71FE7A85200661E9C /* simulTests */ = {
-			isa = PBXGroup;
-			children = (
-				005F4ED81FE7A85200661E9C /* simulTests.swift */,
-				005F4EDA1FE7A85200661E9C /* Info.plist */,
-			);
-			path = simulTests;
-			sourceTree = "<group>";
-		};
-		005F4EE21FE7A85200661E9C /* simulUITests */ = {
-			isa = PBXGroup;
-			children = (
-				005F4EE31FE7A85200661E9C /* simulUITests.swift */,
-				005F4EE51FE7A85200661E9C /* Info.plist */,
-			);
-			path = simulUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005F4ED91FE7A85200661E9C /* simulTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005F4EE41FE7A85200661E9C /* simulUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +406,7 @@
 				DEVELOPMENT_TEAM = PP3R2P42VU;
 				INFOPLIST_FILE = simul/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NietoSF.simul;
+				PRODUCT_BUNDLE_IDENTIFIER = NietoSE.simul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,7 +421,7 @@
 				DEVELOPMENT_TEAM = PP3R2P42VU;
 				INFOPLIST_FILE = simul/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NietoSF.simul;
+				PRODUCT_BUNDLE_IDENTIFIER = NietoSE.simul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -15,6 +15,9 @@
 		005F4ECE1FE7A85200661E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005F4ECC1FE7A85200661E9C /* LaunchScreen.storyboard */; };
 		005F4EFA1FE7ADBD00661E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 005F4EF91FE7ADBC00661E9C /* GoogleService-Info.plist */; };
 		009A5EB51FE7B6320007DBF4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EB41FE7B6320007DBF4 /* DataService.swift */; };
+		009A5EBB1FE7C4170007DBF4 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EBA1FE7C4170007DBF4 /* LogInVC.swift */; };
+		009A5EBD1FE7C45E0007DBF4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */; };
+		009A5EBF1FE7C5B30007DBF4 /* textFieldUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EBE1FE7C5B30007DBF4 /* textFieldUI.swift */; };
 		144211022A53FCECDE29A9D8 /* Pods_simulUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCC4F074C13AFCBD95F4086 /* Pods_simulUITests.framework */; };
 		8B2FBC09549AC0BA2E45729E /* Pods_simulTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB040E679F13292C1D1B91FA /* Pods_simulTests.framework */; };
 		A716E6AB0DA1D721E3754565 /* Pods_simul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B875FB5CC34FD98E1FE223A /* Pods_simul.framework */; };
@@ -50,6 +53,9 @@
 		005F4EDF1FE7A85200661E9C /* simulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simulUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		005F4EF91FE7ADBC00661E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		009A5EB41FE7B6320007DBF4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		009A5EBA1FE7C4170007DBF4 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		009A5EBE1FE7C5B30007DBF4 /* textFieldUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldUI.swift; sourceTree = "<group>"; };
 		03CBA4D848E8BB6DC3C72467 /* Pods-simulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simulTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-simulTests/Pods-simulTests.release.xcconfig"; sourceTree = "<group>"; };
 		229329AFCE4256E7C2342632 /* Pods-simulUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simulUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simulUITests/Pods-simulUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4017703810361EA431E1C4F8 /* Pods-simul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simul.release.xcconfig"; path = "Pods/Target Support Files/Pods-simul/Pods-simul.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 			children = (
 				005F4EC31FE7A85200661E9C /* FirstViewController.swift */,
 				005F4EC51FE7A85200661E9C /* SecondViewController.swift */,
+				009A5EBA1FE7C4170007DBF4 /* LogInVC.swift */,
+				009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 		005F4EF31FE7AA9C00661E9C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				009A5EBE1FE7C5B30007DBF4 /* textFieldUI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,8 +489,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				005F4EC61FE7A85200661E9C /* SecondViewController.swift in Sources */,
+				009A5EBF1FE7C5B30007DBF4 /* textFieldUI.swift in Sources */,
 				005F4EC21FE7A85200661E9C /* AppDelegate.swift in Sources */,
 				005F4EC41FE7A85200661E9C /* FirstViewController.swift in Sources */,
+				009A5EBB1FE7C4170007DBF4 /* LogInVC.swift in Sources */,
+				009A5EBD1FE7C45E0007DBF4 /* SignUpVC.swift in Sources */,
 				009A5EB51FE7B6320007DBF4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

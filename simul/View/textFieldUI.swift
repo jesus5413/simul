@@ -31,7 +31,7 @@ class textFieldUI: UITextField {
        
         
     }
-    
+    // function changes the place holder color to white
     func placeHolderColor(){
         let placeHolder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         self.attributedPlaceholder = placeHolder

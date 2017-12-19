@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        
+        // if there is no user, goes to sign in view
         if FIRAuth.auth()?.currentUser == nil{
             let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let logInVC = storyBoard.instantiateViewController(withIdentifier: "LogInVC")

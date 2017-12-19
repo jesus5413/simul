@@ -1,10 +1,7 @@
-//
-//  textFieldUI.swift
-//  simul
-//
-//  Created by Jesus Nieto on 12/18/17.
-//  Copyright © 2017 Jesus Nieto. All rights reserved.
-//
+/*
+ File maniupualtes text fields
+ in the login and signup views
+ */
 
 import UIKit
 

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		005F4EC21FE7A85200661E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4EC11FE7A85200661E9C /* AppDelegate.swift */; };
-		005F4EC41FE7A85200661E9C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4EC31FE7A85200661E9C /* FirstViewController.swift */; };
-		005F4EC61FE7A85200661E9C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4EC51FE7A85200661E9C /* SecondViewController.swift */; };
+		005F4EC41FE7A85200661E9C /* PublicFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4EC31FE7A85200661E9C /* PublicFeedVC.swift */; };
+		005F4EC61FE7A85200661E9C /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F4EC51FE7A85200661E9C /* GroupFeedVC.swift */; };
 		005F4EC91FE7A85200661E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005F4EC71FE7A85200661E9C /* Main.storyboard */; };
 		005F4ECB1FE7A85200661E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005F4ECA1FE7A85200661E9C /* Assets.xcassets */; };
 		005F4ECE1FE7A85200661E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005F4ECC1FE7A85200661E9C /* LaunchScreen.storyboard */; };
@@ -42,8 +42,8 @@
 /* Begin PBXFileReference section */
 		005F4EBE1FE7A85200661E9C /* simul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005F4EC11FE7A85200661E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		005F4EC31FE7A85200661E9C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		005F4EC51FE7A85200661E9C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		005F4EC31FE7A85200661E9C /* PublicFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFeedVC.swift; sourceTree = "<group>"; };
+		005F4EC51FE7A85200661E9C /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		005F4EC81FE7A85200661E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		005F4ECA1FE7A85200661E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		005F4ECD1FE7A85200661E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		005F4EF11FE7AA7100661E9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				005F4EC31FE7A85200661E9C /* FirstViewController.swift */,
-				005F4EC51FE7A85200661E9C /* SecondViewController.swift */,
+				005F4EC31FE7A85200661E9C /* PublicFeedVC.swift */,
+				005F4EC51FE7A85200661E9C /* GroupFeedVC.swift */,
 				009A5EBA1FE7C4170007DBF4 /* LogInVC.swift */,
 				009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */,
 			);
@@ -483,10 +483,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005F4EC61FE7A85200661E9C /* SecondViewController.swift in Sources */,
+				005F4EC61FE7A85200661E9C /* GroupFeedVC.swift in Sources */,
 				009A5EBF1FE7C5B30007DBF4 /* textFieldUI.swift in Sources */,
 				005F4EC21FE7A85200661E9C /* AppDelegate.swift in Sources */,
-				005F4EC41FE7A85200661E9C /* FirstViewController.swift in Sources */,
+				005F4EC41FE7A85200661E9C /* PublicFeedVC.swift in Sources */,
 				009A5EBB1FE7C4170007DBF4 /* LogInVC.swift in Sources */,
 				009A5EBD1FE7C45E0007DBF4 /* SignUpVC.swift in Sources */,
 				009A5EB51FE7B6320007DBF4 /* DataService.swift in Sources */,

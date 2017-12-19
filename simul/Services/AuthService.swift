@@ -50,8 +50,16 @@ class AuthService{
                             let userData = ["provider": user.providerID, "email": user.email]
                             DataService.instance.createDBUser(uid: user.uid, userData: userData)
                             FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: {(error) in })
+                        
+                            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            let logInVC = storyBoard.instantiateViewController(withIdentifier: "LogInVC")
                             let alert = UIAlertController(title: "Register Successful!", message: "Please verify your email by clicking on sent link!", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                            let okAction = UIAlertAction(title: "Ok", style: .default){
+                            (_) in
+                                controller.present(logInVC, animated: true, completion: nil)
+                            
+                            }
+                            alert.addAction(okAction)
                             controller.present(alert, animated: true, completion: nil)
                             userCreationComplete(true, nil)
                             }
@@ -93,6 +101,9 @@ class AuthService{
                             controller.present(alertVC, animated: true, completion: nil)
                             
                         }else{
+                            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            let mainAppVC = storyboard.instantiateViewController(withIdentifier: "mainAppVC")
+                            controller.present(mainAppVC, animated: true, completion: nil)
                             print("user signed in. Move to main app view controller")
                             
                         }

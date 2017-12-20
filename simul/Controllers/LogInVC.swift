@@ -36,6 +36,12 @@ class LogInVC: UIViewController {
         
     }
     
+    @IBAction func newUserPressed(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let signUpVC = storyBoard.instantiateViewController(withIdentifier: "SignUpVC")
+        self.present(signUpVC, animated: true, completion: nil)
+        
+    }
     
     
 

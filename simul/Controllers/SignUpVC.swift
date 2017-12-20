@@ -49,6 +49,12 @@ class SignUpVC: UIViewController {
         
     }
     
+    @IBAction func alreadyUserPRessed(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let LogInVC = storyBoard.instantiateViewController(withIdentifier: "LogInVC")
+        self.present(LogInVC, animated: true, completion: nil)
+        
+    }
     
 
 }

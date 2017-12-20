@@ -26,8 +26,12 @@ class SignUpVC: UIViewController {
     
     
     @IBAction func createPressed(_ sender: Any) {
+        
         if passwordTextField.text == confirmPasswordField.text{
-            AuthService.instance.registerUser(withEmail: emailTextField.text!, andPass: passwordTextField.text!, on: self, userCreationComplete: {(success, registerError) in
+            let userName = emailTextField.text!.prefix(6)
+            print(userName)
+            
+            AuthService.instance.registerUser(withEmail: emailTextField.text!, andPass: passwordTextField.text!,userName: String(userName), on: self, userCreationComplete: {(success, registerError) in
                 if success{
                     print("user created")
                 }else{

@@ -33,8 +33,9 @@ import Firebase
 class AuthService{
     static let instance = AuthService()
     
+    
     //function lets the user register
-    func registerUser(withEmail email: String, andPass password: String,on controller: UIViewController, userCreationComplete: @escaping (_ status: Bool, _ error: Error?)-> ()){
+    func registerUser(withEmail email: String, andPass password: String,userName username: String,on controller: UIViewController, userCreationComplete: @escaping (_ status: Bool, _ error: Error?)-> ()){
         if email.hasSuffix("my.utsa.edu") && !password.isEmpty{
         
                     FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
@@ -47,7 +48,8 @@ class AuthService{
                                 return
                             }
                         
-                            let userData = ["provider": user.providerID, "email": user.email]
+                        
+                            let userData = ["provider": user.providerID, "email": user.email, "userName": username]
                             DataService.instance.createDBUser(uid: user.uid, userData: userData)
                             FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: {(error) in })
                         

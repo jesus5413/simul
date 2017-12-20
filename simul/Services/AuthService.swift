@@ -57,7 +57,7 @@ class AuthService{
                             let okAction = UIAlertAction(title: "Ok", style: .default){
                             (_) in
                                 controller.present(logInVC, animated: true, completion: nil)
-                            
+                                
                             }
                             alert.addAction(okAction)
                             controller.present(alert, animated: true, completion: nil)
@@ -104,7 +104,9 @@ class AuthService{
                             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                             let mainAppVC = storyboard.instantiateViewController(withIdentifier: "mainAppVC")
                             controller.present(mainAppVC, animated: true, completion: nil)
-                            print("user signed in. Move to main app view controller")
+                            //controller.dismiss(animated: true, completion: nil)
+                            
+                            print("user signed in. Move to main app view controller, log in view dismissed")
                             
                         }
                     }

@@ -19,6 +19,7 @@
 		009A5EBD1FE7C45E0007DBF4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */; };
 		009A5EBF1FE7C5B30007DBF4 /* textFieldUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EBE1FE7C5B30007DBF4 /* textFieldUI.swift */; };
 		009A5EC11FE88BFF0007DBF4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EC01FE88BFF0007DBF4 /* AuthService.swift */; };
+		009A5EC51FE9ECEC0007DBF4 /* PrivateGroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009A5EC41FE9ECEC0007DBF4 /* PrivateGroupFeedVC.swift */; };
 		A716E6AB0DA1D721E3754565 /* Pods_simul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B875FB5CC34FD98E1FE223A /* Pods_simul.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		009A5EBE1FE7C5B30007DBF4 /* textFieldUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldUI.swift; sourceTree = "<group>"; };
 		009A5EC01FE88BFF0007DBF4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		009A5EC41FE9ECEC0007DBF4 /* PrivateGroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateGroupFeedVC.swift; sourceTree = "<group>"; };
 		03CBA4D848E8BB6DC3C72467 /* Pods-simulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simulTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-simulTests/Pods-simulTests.release.xcconfig"; sourceTree = "<group>"; };
 		229329AFCE4256E7C2342632 /* Pods-simulUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simulUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simulUITests/Pods-simulUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4017703810361EA431E1C4F8 /* Pods-simul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simul.release.xcconfig"; path = "Pods/Target Support Files/Pods-simul/Pods-simul.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				005F4EC51FE7A85200661E9C /* GroupFeedVC.swift */,
 				009A5EBA1FE7C4170007DBF4 /* LogInVC.swift */,
 				009A5EBC1FE7C45E0007DBF4 /* SignUpVC.swift */,
+				009A5EC41FE9ECEC0007DBF4 /* PrivateGroupFeedVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				009A5EBD1FE7C45E0007DBF4 /* SignUpVC.swift in Sources */,
 				009A5EB51FE7B6320007DBF4 /* DataService.swift in Sources */,
 				009A5EC11FE88BFF0007DBF4 /* AuthService.swift in Sources */,
+				009A5EC51FE9ECEC0007DBF4 /* PrivateGroupFeedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

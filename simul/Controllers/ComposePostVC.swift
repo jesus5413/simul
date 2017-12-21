@@ -19,16 +19,16 @@ class ComposePostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
+        postButton.bindToKeyBoard()
+        self.hideKeyboardTapped()
         
 
         // Do any additional setup after loading the view.
     }
 
     @IBAction func sendButtonPressed(_ sender: Any) {
+        
         if textView.text != nil && textView.text != "Compose..."{
-            
-            
-            
             postButton.isEnabled = false
             DataService.instance.uploadPost(withMessage: textView.text, withGroupKey: nil, sendComplete: { (isComplete) in
                 if isComplete{
@@ -42,25 +42,19 @@ class ComposePostVC: UIViewController {
                 }
                 
             })
-            
-            
-            
         }
-        
-        
     }
     
     
     @IBAction func closeBurronPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        
-        
     }
     
 
 }
 
 extension ComposePostVC: UITextViewDelegate{
+    //resets text view when type
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
         

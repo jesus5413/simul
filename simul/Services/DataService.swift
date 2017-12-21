@@ -43,6 +43,46 @@ class DataService{
         
     }
     
+//    func getUserNameFromDataBase() -> String {
+//        var userName: String
+//        REF_BASE.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).observe(.value, with: { (snapshot) in
+//            if let dictionary = snapshot.value as? [String: AnyObject]{
+//                userName = dictionary["userName"] as? String
+//
+//            }
+//
+//        }, withCancel: nil)
+//
+//        return userName
+//
+//
+//    }
+    
+    // uploads post and labels the username in the databasebelow the post 
+    func uploadPost(withMessage message: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool)-> () ){
+        if groupKey != nil{
+            //send to specified gourp/group ref
+            
+        }else{
+            
+            REF_BASE.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject]{
+                    let userName = dictionary["userName"] as? String
+                    //print(userName)
+                    self.REF_FEED.childByAutoId().updateChildValues(["content": message, "sendUserName": userName])
+                }
+                
+                
+            }, withCancel: nil)
+            
+            //REF_FEED.childByAutoId().updateChildValues(["content": message, "sendUserName": userName])
+            sendComplete(true)
+        }
+        
+        
+    }
+    
     
     
     

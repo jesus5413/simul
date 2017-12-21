@@ -26,6 +26,9 @@
                                         <rect key="frame" x="325" y="30" width="30" height="30"/>
                                         <color key="tintColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="Ojh-e4-wT8" kind="presentation" id="6wY-fc-aDj"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-MQ-2A1">
                                         <rect key="frame" x="134" y="35" width="106" height="21"/>
@@ -78,6 +81,102 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1953" y="-559"/>
+        </scene>
+        <!--Compose PostVC-->
+        <scene sceneID="UTf-mv-UqA">
+            <objects>
+                <viewController id="Ojh-e4-wT8" customClass="ComposePostVC" customModule="simul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLL-12-gh2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGk-qV-MOG">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rUT-Ra-kwm"/>
+                                </constraints>
+                                <state key="normal" title=" Post" image="send"/>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="Ojh-e4-wT8" eventType="touchUpInside" id="35S-hL-VPc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cj-a7-RUF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-0U-y1J">
+                                        <rect key="frame" x="131" y="35" width="112" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCZ-WU-o0p">
+                                        <rect key="frame" x="20" y="30" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9ix-w9-wDu"/>
+                                            <constraint firstAttribute="width" constant="30" id="NT5-ng-fa1"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBurronPressed:" destination="Ojh-e4-wT8" eventType="touchUpInside" id="1yt-oU-WWS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dzJ-0U-y1J" firstAttribute="centerY" secondItem="TCZ-WU-o0p" secondAttribute="centerY" id="1v5-dR-brO"/>
+                                    <constraint firstItem="dzJ-0U-y1J" firstAttribute="centerX" secondItem="9cj-a7-RUF" secondAttribute="centerX" id="GbK-1Y-bRH"/>
+                                    <constraint firstItem="dzJ-0U-y1J" firstAttribute="top" secondItem="9cj-a7-RUF" secondAttribute="top" constant="35" id="Hjw-6m-ZO7"/>
+                                    <constraint firstItem="TCZ-WU-o0p" firstAttribute="top" secondItem="9cj-a7-RUF" secondAttribute="top" constant="30" id="qdY-cg-Q13"/>
+                                    <constraint firstAttribute="bottom" secondItem="TCZ-WU-o0p" secondAttribute="bottom" constant="10" id="vka-LO-alm"/>
+                                    <constraint firstItem="TCZ-WU-o0p" firstAttribute="leading" secondItem="9cj-a7-RUF" secondAttribute="leading" constant="20" id="xNv-TR-uOg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aer-Gj-4TO">
+                                <rect key="frame" x="59" y="115" width="316" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2AK-jF-0vG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Compose..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xZF-Np-LYR">
+                                <rect key="frame" x="16" y="151" width="343" height="437"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9cj-a7-RUF" firstAttribute="top" secondItem="aLL-12-gh2" secondAttribute="top" id="90Q-Bv-XxY"/>
+                            <constraint firstItem="eGk-qV-MOG" firstAttribute="bottom" secondItem="myT-2O-Ed0" secondAttribute="bottom" id="930-Kd-tyh"/>
+                            <constraint firstItem="eGk-qV-MOG" firstAttribute="top" secondItem="xZF-Np-LYR" secondAttribute="bottom" constant="29" id="CSM-bP-DZ4"/>
+                            <constraint firstItem="xZF-Np-LYR" firstAttribute="top" secondItem="aer-Gj-4TO" secondAttribute="bottom" constant="16" id="DD9-BO-ecw"/>
+                            <constraint firstItem="myT-2O-Ed0" firstAttribute="trailing" secondItem="xZF-Np-LYR" secondAttribute="trailing" constant="16" id="OZM-Iu-05E"/>
+                            <constraint firstItem="aer-Gj-4TO" firstAttribute="leading" secondItem="myT-2O-Ed0" secondAttribute="leading" constant="59" id="RN6-m4-KW1"/>
+                            <constraint firstItem="eGk-qV-MOG" firstAttribute="leading" secondItem="9cj-a7-RUF" secondAttribute="leading" id="ZRm-XU-dIl"/>
+                            <constraint firstItem="9cj-a7-RUF" firstAttribute="leading" secondItem="myT-2O-Ed0" secondAttribute="leading" id="ZrO-hd-V4E"/>
+                            <constraint firstItem="eGk-qV-MOG" firstAttribute="trailing" secondItem="aer-Gj-4TO" secondAttribute="trailing" id="a33-Hu-K7U"/>
+                            <constraint firstItem="9cj-a7-RUF" firstAttribute="trailing" secondItem="myT-2O-Ed0" secondAttribute="trailing" id="ahZ-Zi-pPN"/>
+                            <constraint firstItem="xZF-Np-LYR" firstAttribute="leading" secondItem="myT-2O-Ed0" secondAttribute="leading" constant="16" id="e4x-lu-lCm"/>
+                            <constraint firstItem="aer-Gj-4TO" firstAttribute="top" secondItem="9cj-a7-RUF" secondAttribute="bottom" constant="45" id="gCX-ra-MMQ"/>
+                            <constraint firstItem="myT-2O-Ed0" firstAttribute="trailing" secondItem="aer-Gj-4TO" secondAttribute="trailing" id="sQL-Gp-9WS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="myT-2O-Ed0"/>
+                    </view>
+                    <connections>
+                        <outlet property="postButton" destination="eGk-qV-MOG" id="XOr-Ts-8cl"/>
+                        <outlet property="textView" destination="xZF-Np-LYR" id="pOD-nf-wtH"/>
+                        <outlet property="userLabel" destination="aer-Gj-4TO" id="n8O-v8-ZAY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJe-eS-Pea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="-559"/>
         </scene>
         <!--Groups Feed-->
         <scene sceneID="wg7-f3-ORb">
@@ -221,7 +320,7 @@
                     <viewLayoutGuide key="safeArea" id="2eX-wU-aKx"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1953" y="113"/>
+            <point key="canvasLocation" x="1953" y="174"/>
         </scene>
         <!--Log InVC-->
         <scene sceneID="x3k-j5-NtQ">
@@ -281,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bki-NP-yrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1292" y="-231"/>
+            <point key="canvasLocation" x="503" y="-248"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="wtc-cx-R6h">
@@ -449,9 +548,11 @@
     </scenes>
     <resources>
         <image name="addNewIcon" width="19" height="19"/>
+        <image name="close" width="21" height="20"/>
         <image name="compose" width="21" height="24"/>
         <image name="feed-tabIcon" width="25" height="21"/>
         <image name="groups-tabIcon" width="25" height="23"/>
+        <image name="send" width="29" height="29"/>
     </resources>
     <color key="tintColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
 </document>

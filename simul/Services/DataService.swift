@@ -13,12 +13,14 @@ import Firebase
 let DB_BASE = FIRDatabase.database().reference()
 
 class DataService{
+
     static let instance = DataService()
     
     private var _REF_BASE = DB_BASE // database reference
     private var _REF_USER = DB_BASE.child("users") // user reference
     private var _REF_GROUPS = DB_BASE.child("groups") // groups reference
     private var _REF_FEED = DB_BASE.child("feed") // feed reference
+    
     
     //public values
     var REF_BASE: FIRDatabaseReference {
@@ -105,6 +107,20 @@ class DataService{
         }, withCancel: nil)
         
         
+        
+    }
+    
+    
+    // gets username from database to display in UI labels
+    func getUserName(label UIlabel : UILabel){
+       
+        REF_BASE.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject]{
+                let userName = dictionary["userName"] as? String
+                UIlabel.text = userName
+            }
+            
+        }, withCancel: nil)
         
     }
     

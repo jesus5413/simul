@@ -20,7 +20,8 @@ class ComposePostVC: UIViewController {
         super.viewDidLoad()
         textView.delegate = self
         postButton.bindToKeyBoard()
-        userNameLabel()
+        //userNameLabel()
+        DataService.instance.getUserName(label: self.userLabel)
         self.hideKeyboardTapped()
         
 
@@ -53,18 +54,18 @@ class ComposePostVC: UIViewController {
     }
     
     // get the username to post it on top of the compose view
-    func userNameLabel(){
-        DataService.instance.REF_BASE.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject]{
-                let userName = dictionary["userName"] as? String
-                self.userLabel.text = userName
-                
-            }
-            
-            
-        }, withCancel: nil)
-        
-    }
+//    func userNameLabel(){
+//        DataService.instance.REF_BASE.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+//            if let dictionary = snapshot.value as? [String: AnyObject]{
+//                let userName = dictionary["userName"] as? String
+//                self.userLabel.text = userName
+//
+//            }
+//
+//
+//        }, withCancel: nil)
+//
+//    }
 
     
 

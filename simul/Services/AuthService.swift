@@ -36,7 +36,8 @@ class AuthService{
     
     //function lets the user register
     func registerUser(withEmail email: String, andPass password: String,userName username: String,on controller: UIViewController, userCreationComplete: @escaping (_ status: Bool, _ error: Error?)-> ()){
-        if email.hasSuffix("my.utsa.edu") && !password.isEmpty{
+        email.hasSuffix("my.utsa.edu")
+        if  !password.isEmpty{
         
                     FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
                             guard let user = user else{
@@ -78,8 +79,8 @@ class AuthService{
     
     //function logins the user, checks for email verification
     func logInUser(withEmail email: String, andPass password: String,on controller: UIViewController, logInComplete: @escaping (_ status: Bool, _ error: Error?)-> ()){
-        
-        if email.hasSuffix("my.utsa.edu") && !password.isEmpty{
+        //email.hasSuffix("my.utsa.edu")
+        if  !password.isEmpty{
                 FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                     
                     if error != nil{

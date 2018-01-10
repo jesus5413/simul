@@ -99,6 +99,7 @@ class DataService{
                 messageArray.append(message)
             }
             
+            messageArray = messageArray.reversed() // reverses the order so latest post can be at the top
             handler(messageArray)
             
         }, withCancel: nil)

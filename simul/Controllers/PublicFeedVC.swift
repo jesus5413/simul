@@ -37,6 +37,7 @@ class PublicFeedVC: UIViewController {
 
 }
 
+//public feed table view extension
 extension PublicFeedVC: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -46,6 +47,7 @@ extension PublicFeedVC: UITableViewDelegate, UITableViewDataSource{
         return messageArray.count
     }
     
+    // populates the table view cells and the table view 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? feedCell else{
             return UITableViewCell()

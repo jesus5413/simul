@@ -24,7 +24,7 @@ class SignUpVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    // function creates user
     @IBAction func createPressed(_ sender: Any) {
         
         if passwordTextField.text == confirmPasswordField.text{
@@ -53,6 +53,7 @@ class SignUpVC: UIViewController {
         
     }
     
+    // function goes back to login view
     @IBAction func alreadyUserPRessed(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let LogInVC = storyBoard.instantiateViewController(withIdentifier: "LogInVC")

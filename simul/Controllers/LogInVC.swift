@@ -21,6 +21,7 @@ class LogInVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //functions log ins user into the application 
     @IBAction func logInPressed(_ sender: Any) {
         AuthService.instance.logInUser(withEmail: emailField.text!, andPass: passwordField.text!, on: self, logInComplete: {(success, logInError) in
             if success{

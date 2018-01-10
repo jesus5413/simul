@@ -84,7 +84,7 @@ class DataService{
     }
     
     
-    
+    // function gets all the posts from the database
     func getAllFeedMessages(handler: @escaping (_ messages: [messageModel] ) -> ()){
         var messageArray = [messageModel]()
         REF_FEED.observeSingleEvent(of: .value, with: { (feedMessageSnapshot) in

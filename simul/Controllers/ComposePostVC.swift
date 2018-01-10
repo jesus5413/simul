@@ -27,6 +27,7 @@ class ComposePostVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // function stores the post in database
     @IBAction func sendButtonPressed(_ sender: Any) {
         
         if textView.text != nil && textView.text != "Compose..."{
@@ -46,7 +47,7 @@ class ComposePostVC: UIViewController {
         }
     }
     
-    
+    // funnction dismisses compose view
     @IBAction func closeBurronPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -68,7 +69,7 @@ class ComposePostVC: UIViewController {
     
 
 }
-
+// extension that clears up the text view when you tap to type 
 extension ComposePostVC: UITextViewDelegate{
     //resets text view when type
     func textViewDidBeginEditing(_ textView: UITextView) {
